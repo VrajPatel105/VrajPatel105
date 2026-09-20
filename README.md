@@ -18,15 +18,18 @@ Serving layer for the paged engine: FastAPI, Docker, GitHub Actions CI/CD pushin
 **[NutriGrove](https://github.com/VrajPatel105/NutriGrove)**
 Mobile app recommending meals from live dining hall menus. Shipped on the App Store and Google Play with 100+ users; 2nd place at a $12,000 AI + startup hackathon.
 
+**[Massachusetts Housing Price Predictor](https://github.com/VrajPatel105/Massachusetts-Housing-Recommender-System)**
+End-to-end ML pipeline: a Zillow scraper collecting Massachusetts listings with 40+ features, cleaning and feature engineering, an ExtraTrees regressor reaching R² ≈ 0.854 on price prediction, and a property recommender deployed in Streamlit. The cleaned dataset is published on Kaggle.
+
 ## Experience
 
-**Fleet Robotics**, ML Engineer Intern (Summer 2026). Closed the sim-to-real gap for a hull-cleaning robot by finding that the MuJoCo simulator's noise averaged out instead of accumulating, rebuilding the noise model against AprilTag ground truth, and retraining the SAC navigation policy on the corrected simulator.
+**[Fleet Robotics](https://www.linkedin.com/posts/vrajpatel105_finally-wrapping-up-my-summer-at-fleet-robotics-activity-7491448062242914306-sKL8)**, ML Engineer Intern (Summer 2026). Closed the sim-to-real gap for a hull-cleaning robot by finding that the MuJoCo simulator's noise averaged out instead of accumulating, rebuilding the noise model against AprilTag ground truth, and retraining the SAC navigation policy on the corrected simulator.
 
-**Blue Tech Externship**, Courage Builder Program (Mar 2026). Built a simulated autonomous UUV for sonar-based mine detection in MATLAB/Simulink; 1st place in the cohort.
+**[Blue Tech Externship](https://www.linkedin.com/posts/vrajpatel105_im-grateful-to-have-participated-in-the-activity-7441800946977931264-h3nf)**, Courage Builder Program (Mar 2026). Built a simulated autonomous UUV for sonar-based mine detection in MATLAB/Simulink; 1st place in the cohort.
 
-**SMAST, UMass Dartmouth**, Research Software Engineering Intern (Fall 2025). Refactored the R codebase for a NOAA-funded offshore wind and fishery survey project, parallelized spatial simulations for a 2x speedup, and packaged an internal R library.
+**[SMAST, UMass Dartmouth](https://www.linkedin.com/posts/vrajpatel105_wrapping-up-an-incredible-micro-internship-activity-7394126929957773313-otMJ)**, Research Software Engineering Intern (Fall 2025). Refactored the R codebase for a NOAA-funded offshore wind and fishery survey project, parallelized spatial simulations for a 2x speedup, and packaged an internal R library.
 
-**SMAST, UMass Dartmouth**, Data Science Intern (Summer 2025). Automated analysis of 38 years of estuary data across 7 sites, cutting report turnaround from 3 weeks to 10 minutes.
+**[SMAST, UMass Dartmouth](https://www.linkedin.com/posts/vrajpatel105_wrapping-up-an-incredible-summer-internship-activity-7359916390083936256-LVyu)**, Data Science Intern (Summer 2025). Automated analysis of 38 years of estuary data across 7 sites, cutting report turnaround from 3 weeks to 10 minutes.
 
 ## Stack
 
