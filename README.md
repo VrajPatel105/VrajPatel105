@@ -23,6 +23,7 @@ End-to-end ML pipeline: a Zillow scraper collecting Massachusetts listings with 
 
 ## Experience
 
+**[General Dynamics Mission Systems](https://www.linkedin.com/in/vrajpatel105/)**, Capstone Team Member. Senior capstone at UMass Dartmouth sponsored by General Dynamics Mission Systems, applying deep learning to state estimation. Training and evaluating LSTM, GRU, and transformer models against classical baselines, including Kalman variants (KF, EKF, UKF) and particle filters (bootstrap, auxiliary, Rao-Blackwellized), within a custom simulation framework.
 **[Fleet Robotics](https://www.linkedin.com/posts/vrajpatel105_finally-wrapping-up-my-summer-at-fleet-robotics-activity-7491448062242914306-sKL8)**, ML Engineer Intern (Summer 2026). Closed the sim-to-real gap for a hull-cleaning robot by finding that the MuJoCo simulator's noise averaged out instead of accumulating, rebuilding the noise model against AprilTag ground truth, and retraining the SAC navigation policy on the corrected simulator.
 
 **[Blue Tech Externship](https://www.linkedin.com/posts/vrajpatel105_im-grateful-to-have-participated-in-the-activity-7441800946977931264-h3nf)**, Courage Builder Program (Mar 2026). Built a simulated autonomous UUV for sonar-based mine detection in MATLAB/Simulink; 1st place in the cohort.
