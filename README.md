@@ -12,6 +12,9 @@ A mini vLLM-style inference server built from scratch: paged KV cache, a continu
 **[cpp-gpu-inference](https://github.com/VrajPatel105/cpp-gpu-inference)**
 A GPU inference stack from first principles. FlashAttention-2 forward and backward in Triton (peak memory matches PyTorch SDPA up to 8K tokens), LLM.int8()-style quantization written from scratch (perplexity within 0.02% of the unquantized model), a Triton matmul within ~20% of cuBLAS in true FP32, and CUDA kernels profiled with Nsight Compute. [Full writeup](https://vrajpatel105.github.io/gpu-inference/index.html)
 
+**[blackwell-gemm](https://github.com/VrajPatel105/blackwell-gemm)** (in progress)
+CUDA GEMM written from scratch on an RTX 5080 (sm_120), moving step by step from a naive kernel through shared-memory tiling and register blocking to tensor-core mma.sync and CuTe. Each kernel is profiled in Nsight Compute and benchmarked against cuBLAS, with the bottleneck it removes documented alongside the code.
+
 **[paged-engine-serving](https://github.com/VrajPatel105/paged-engine-serving)**
 Serving layer for the paged engine: FastAPI, Docker, GitHub Actions CI/CD pushing to AWS ECR, and a health check that gates on Triton kernel warmup.
 
@@ -32,6 +35,10 @@ End-to-end ML pipeline: a Zillow scraper collecting Massachusetts listings with 
 **[SMAST, UMass Dartmouth](https://www.linkedin.com/posts/vrajpatel105_wrapping-up-an-incredible-micro-internship-activity-7394126929957773313-otMJ)**, Research Software Engineering Intern (Fall 2025). Refactored the R codebase for a NOAA-funded offshore wind and fishery survey project, parallelized spatial simulations for a 2x speedup, and packaged an internal R library.
 
 **[SMAST, UMass Dartmouth](https://www.linkedin.com/posts/vrajpatel105_wrapping-up-an-incredible-summer-internship-activity-7359916390083936256-LVyu)**, Data Science Intern (Summer 2025). Automated analysis of 38 years of estuary data across 7 sites, cutting report turnaround from 3 weeks to 10 minutes.
+
+## Open Source
+
+**[CobraML2](https://github.com/govindansriram/CobraML2)**: [PR #39](https://github.com/govindansriram/CobraML2/pull/39) (open, under review). Added a GPT-2 benchmark and a configurable `use_naive_attention` option to compare attention implementations.
 
 ## Stack
 
