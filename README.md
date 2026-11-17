@@ -9,20 +9,19 @@ Looking for new-grad roles in ML systems, inference, and GPU performance startin
 **[paged-inference-engine](https://github.com/VrajPatel105/paged-inference-engine)**
 A mini vLLM-style inference server built from scratch: paged KV cache, a continuous batching scheduler, and a FlashAttention-2 Triton kernel rewritten to read through a block table, with INT8 KV cache quantization. The paged kernel matches PyTorch SDPA within fp16 precision on scrambled, non-contiguous block layouts.
 
+**[blackwell-gemm](https://github.com/VrajPatel105/blackwell-gemm)**
+FP32 SGEMM in CUDA C++: 7 kernels from naive to warp tiling, each profiled with Nsight Compute. Best: 76% of cuBLAS on an RTX 5080 Laptop, 56% on a B200.
+
 **[cpp-gpu-inference](https://github.com/VrajPatel105/cpp-gpu-inference)**
 A GPU inference stack from first principles. FlashAttention-2 forward and backward in Triton (peak memory matches PyTorch SDPA up to 8K tokens), LLM.int8()-style quantization written from scratch (perplexity within 0.02% of the unquantized model), a Triton matmul within ~20% of cuBLAS in true FP32, and CUDA kernels profiled with Nsight Compute. [Full writeup](https://vrajpatel105.github.io/gpu-inference/index.html)
-
-**[blackwell-gemm](https://github.com/VrajPatel105/blackwell-gemm)** (in progress)
-CUDA GEMM written from scratch on an RTX 5080 (sm_120), moving step by step from a naive kernel through shared-memory tiling and register blocking to tensor-core mma.sync and CuTe. Each kernel is profiled in Nsight Compute and benchmarked against cuBLAS, with the bottleneck it removes documented alongside the code.
 
 **[paged-engine-serving](https://github.com/VrajPatel105/paged-engine-serving)**
 Serving layer for the paged engine: FastAPI, Docker, GitHub Actions CI/CD pushing to AWS ECR, and a health check that gates on Triton kernel warmup.
 
-**[NutriGrove](https://github.com/VrajPatel105/NutriGrove)**
-Mobile app recommending meals from live dining hall menus. Shipped on the App Store and Google Play with 100+ users; 2nd place at a $12,000 AI + startup hackathon.
+**[edge-quantization-snapdragon](https://github.com/VrajPatel105/edge-quantization-snapdragon)**
+Ran a decoder-only transformer entirely on the NPU of a Snapdragon 8 Elite Gen 5 with Qualcomm AI Hub, comparing FP16, W8A8, and W8A16. W8A8 cut latency from 2.5 ms to 1.4 ms, but top-1 agreement with FP32 fell to 24.6%. A PyTorch sensitivity sweep traced the loss to INT8 LayerNorm outputs and the residual stream, while INT8 linear layers alone were near-lossless.
 
-**[Massachusetts Housing Price Predictor](https://github.com/VrajPatel105/Massachusetts-Housing-Recommender-System)**
-End-to-end ML pipeline: a Zillow scraper collecting Massachusetts listings with 40+ features, cleaning and feature engineering, an ExtraTrees regressor reaching R² ≈ 0.854 on price prediction, and a property recommender deployed in Streamlit. The cleaned dataset is published on Kaggle.
+**Earlier:** [NutriGrove](https://github.com/VrajPatel105/NutriGrove), a meal-recommendation app shipped on the App Store and Google Play (100+ users, 2nd place at a $12,000 AI + startup hackathon).
 
 ## Experience
 
@@ -37,6 +36,8 @@ End-to-end ML pipeline: a Zillow scraper collecting Massachusetts listings with 
 **[SMAST, UMass Dartmouth](https://www.linkedin.com/posts/vrajpatel105_wrapping-up-an-incredible-summer-internship-activity-7359916390083936256-LVyu)**, Data Science Intern (Summer 2025). Automated analysis of 38 years of estuary data across 7 sites, cutting report turnaround from 3 weeks to 10 minutes.
 
 ## Open Source
+
+**[vLLM](https://github.com/vllm-project/vllm)**: [PR #61901](https://github.com/vllm-project/vllm/pull/61901) (open, under review). Added config-time dtype validation for the Triton LoRA kernels, so an unsupported dtype (`float32` with `enable_lora`) is rejected at startup instead of crashing on an assert inside the `lora_expand` kernel.
 
 **[CobraML2](https://github.com/govindansriram/CobraML2)**: [PR #39](https://github.com/govindansriram/CobraML2/pull/39) (open, under review). Added a GPT-2 benchmark and a configurable `use_naive_attention` option to compare attention implementations.
 
